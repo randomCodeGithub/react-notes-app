@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background-color: #d3d3d3;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.note-app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.notes {
+  position: relative;
+  height: 100%;
+}
+
+.note {
+  background-color: #fff;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  height: 400px;
+  width: 400px;
+}
+
+.note .tools {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5d68e2;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.note .tools p {
+  margin: 0;
+  color: #fff;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.note .tools button > svg {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.note .main {
+  background-color: #eee;
+  overflow: hidden;
+  height: 400px;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.note .main,
+.note textarea {
+  padding-top: 38px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.note textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  height: 100%;
+  width: 100%;
+  resize: none;
+}
+
+.note .hidden {
+  display: none;
+}
+
+.icon {
+  height: 78px;
+  width: 78px;
+  font-size: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #5d68e2;
+}
+
+.add-note {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  cursor: pointer;
+  color: #5d68e2;
 }
